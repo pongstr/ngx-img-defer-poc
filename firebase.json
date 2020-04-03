@@ -1,0 +1,89 @@
+{
+  "hosting": {
+    "site": "nitrozeus",
+    "public": "dist/poc-img-defer",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "headers": [
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "Set-Cookie",
+            "value": "pongstr=https://nitrozeus.web.app;HttpOnly;Secure;SameSite=Strict"
+          },
+          {
+            "key": "Set-Cookie",
+            "value": "pongstr=https://nitrozeus.web.app;HttpOnly;Secure;SameSite=Strict"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=300, s-maxage=600"
+          },
+          {
+            "key": "Content-Security-Policy",
+            "value": "default-src 'self' * nitrozeus.web.app api.unsplash.com fonts.googleapis.com; script-src 'nonce-rAnd0m123' 'unsafe-inline' http: https:; style-src 'self' 'unsafe-inline' data: nitrozeus.web.app *.unsplash.com *.googleapis.com; object-src 'none'; base-uri 'none';"
+          },
+          {
+            "key": "Strict-Transport-Security",
+            "value": "max-age=31536000; includeSubDomains; preload"
+          },
+          {
+            "key": "X-Frame-Options",
+            "value": "SAMEORIGIN"
+          },
+          {
+            "key": "X-XSS-Protection",
+            "value": "1; mode=block"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css|png|jpg|jpeg|webp)",
+        "headers": [
+          {
+            "key": "Set-Cookie",
+            "value": "pongstr=https://nitrozeus.web.app;HttpOnly;Secure;SameSite=Strict"
+          },
+          {
+            "key": "Set-Cookie",
+            "value": "pongstr=https://nitrozeus.web.app;HttpOnly;Secure;SameSite=Strict"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=300, s-maxage=600"
+          },
+          {
+            "key": "Content-Security-Policy",
+            "value": "default-src 'self' * nitrozeus.web.app api.unsplash.com fonts.googleapis.com; script-src 'nonce-rAnd0m123' 'unsafe-inline' http: https:; style-src 'self' 'unsafe-inline' data: nitrozeus.web.app *.unsplash.com *.googleapis.com; object-src 'none'; base-uri 'none';"
+          },
+          {
+            "key": "Strict-Transport-Security",
+            "value": "max-age=31536000; includeSubDomains; preload"
+          },
+          {
+            "key": "Referrer-Policy",
+            "value": "origin; no-referrer-when-downgrade"
+          },
+          {
+            "key": "X-Frame-Options",
+            "value": "SAMEORIGIN"
+          },
+          {
+            "key": "X-XSS-Protection",
+            "value": "1; mode=block"
+          }
+        ]
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

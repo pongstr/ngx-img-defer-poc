@@ -1,0 +1,9 @@
+<div class="flex-container">
+  <div class="flex-item" *ngFor="let item of collection">
+    <img class="flex-item__image"
+      imgDefer
+      [imgDeferSource]="item.urls"
+      [attr.data-src]="item.urls.regular"
+      [attr.src]="placeholder">
+  </div>
+</div>
